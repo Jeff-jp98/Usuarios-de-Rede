@@ -20,7 +20,7 @@
             <td> <span th:text="${usuario.nome}"></span> </td>
             <td> <span th:text="${usuario.motivo}"></span> </td>
             <td> <span th:text="${usuario.nucleo}"></span> </td>
-            <td><button type="submit">Criar</button></td>
+            <td><button th:action="@{../usuario/ipconfig}" type="submit">Criar</button></td>
         </tr>
     </table>
 </div>
