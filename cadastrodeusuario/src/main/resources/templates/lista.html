@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th= "http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+<div id="listaDeUsuarios">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Motivo</th>
+            <th>Nucleo</th>
+        </tr>
+        </thead>
+        <tr th:each="usuario : ${usuarios}">
+            <td> <span th:text="${usuario.nome}"></span> </td>
+            <td> <span th:text="${usuario.motivo}"></span> </td>
+            <td> <span th:text="${usuario.nucleo}"></span> </td>
+            <td><button type="submit">Criar</button></td>
+        </tr>
+    </table>
+</div>
+</div>
+</body>
+</html>

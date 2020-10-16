@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th= "http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cadastro</title>
+</head>
+<body>
+<h1>Cadastro de usuarios de rede</h1>
+<div>
+<form th:action="@{../usuario/salvar}" th:object="${u}" method="post">
+	<label for="input-nome">Nome</label>
+	<input type="text" id="input-nome" th:field="${u.nome}"/>
+	<label for="input-email">E-mail</label>
+	<input type="text" id="input-email" th:field="${u.email}"/>
+	<label for="input-cargo">Cargo</label>
+	<input type="text" id="input-cargo" th:field="${u.cargo}"/>
+	<label for="input-telefone">Telefone</label>
+	<input type="text" id="input-telefone" th:field="${u.telefone}"/>
+	<label for="input-nucleo">Nucleo</label>
+	<input type="text" id="input-nucleo" th:field="${u.nucleo}"/>
+	<label for="input-data">Data de Expiração</label>
+	<input type="text" id="input-data" th:field="${u.dataExpiracao}"/>
+	<label for="input-cpf">CPF</label>
+	<input type="text" id="input-cpf" th:field="${u.cpf}"/>
+	<label for="input-vinculo">Vinculo</label>
+	<input type="text" id="input-vinculo" th:field="${u.vinculo}"/>
+	<label for="input-motivo">Motivo</label>
+	<input type="text" id="input-motivo" th:field="${u.motivo}"/>
+	<button type="submit">Salvar</button>
+</form>
+</div>
+</body>
+</html>
